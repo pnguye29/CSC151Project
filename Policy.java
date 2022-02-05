@@ -135,17 +135,17 @@ public class Policy
       
       if(phAge > 50) 
       {
-         baseFee =+ 75;
+         baseFee += 75;
       }
       
       if(phSmokingStatus.equals("smoker")) 
       {
-         baseFee =+ 75;
+         baseFee += 75;
       }
       
       if(getBMI() > 35) 
       {
-         baseFee =+ (getBMI() - 35) * 20;
+         baseFee += (getBMI() - 35) * 20;
       }
       
       return baseFee;
