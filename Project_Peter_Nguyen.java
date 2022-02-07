@@ -17,10 +17,10 @@ public class Project_Peter_Nguyen
       System.out.println("Policyholder's Last Name: " + p.getPHLastName());
       System.out.println("Policyholder's Age: " + p.getPHAge());
       System.out.println("Policyholder's Smoking Status: " + p.getPHSmokingStatus());
-      System.out.println("Policyholder's Height: " + p.getPHHeight());
-      System.out.println("Policyholder's Weight: " + p.getPHWeight());
-      System.out.println("Policyholder's BMI: " + p.getBMI());
-      System.out.println("Policy Price: " + p.getInsurancePrice());
+      System.out.printf("Policyholder's Height: %.1f inches\n", p.getPHHeight());
+      System.out.printf("Policyholder's Weight: %.1f pounds\n", p.getPHWeight());
+      System.out.printf("Policyholder's BMI: %.2f\n", p.getBMI());
+      System.out.printf("Policy Price: $%.2f", p.getInsurancePrice());
    }
    
    public static Policy newPolicy()
