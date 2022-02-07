@@ -4,6 +4,27 @@ public class Project_Peter_Nguyen
 {
    public static void main(String[] args)
    {
+      Policy currentPolicy = newPolicy();
+      
+      menu(currentPolicy);
+   }
+   
+   public static void menu(Policy p)
+   {
+      System.out.println("Policy Number: " + p.getPNum());
+      System.out.println("Provider Name: " + p.getProviderName());
+      System.out.println("Policyholder's First Name: " + p.getPHFirstName());
+      System.out.println("Policyholder's Last Name: " + p.getPHLastName());
+      System.out.println("Policyholder's Age: " + p.getPHAge());
+      System.out.println("Policyholder's Smoking Status: " + p.getPHSmokingStatus());
+      System.out.println("Policyholder's Height: " + p.getPHHeight());
+      System.out.println("Policyholder's Weight: " + p.getPHWeight());
+      System.out.println("Policyholder's BMI: " + p.getBMI());
+      System.out.println("Policy Price: " + p.getInsurancePrice());
+   }
+   
+   public static Policy newPolicy()
+   {
       Scanner key = new Scanner (System.in);
       
       int pNum = 0; 
@@ -16,7 +37,6 @@ public class Project_Peter_Nguyen
       double phWeight = 0.0;
       
       
-      //Input
       System.out.print("Please enter the Policy Number: ");
       pNum = key.nextInt();
       System.out.print("Please enter the Provider Name: "); 
@@ -36,22 +56,9 @@ public class Project_Peter_Nguyen
       System.out.print("Please enter the Policyholder's Weight (in pounds): ");
       phWeight= key.nextDouble();
       
-      Policy one = new Policy (pNum,providerName,phFirstName,phLastName,phAge,phSmokingStatus,phHeight,phWeight);
+      Policy newP = new Policy (pNum,providerName,phFirstName,phLastName,phAge,phSmokingStatus,phHeight,phWeight);
       
-      menu(one);
+      return newP;
    }
    
-   public static void menu(Policy p)
-   {
-      System.out.println("Policy Number: " + p.getPNum());
-      System.out.println("Provider Name: " + p.getProviderName());
-      System.out.println("Policyholder's First Name: " + p.getPHFirstName());
-      System.out.println("Policyholder's Last Name: " + p.getPHLastName());
-      System.out.println("Policyholder's Age: " + p.getPHAge());
-      System.out.println("Policyholder's Smoking Status: " + p.getPHSmokingStatus());
-      System.out.println("Policyholder's Height: " + p.getPHHeight());
-      System.out.println("Policyholder's Weight: " + p.getPHWeight());
-      System.out.println("Policyholder's BMI: " + p.getBMI());
-      System.out.println("Policy Price: " + p.getInsurancePrice());
-   }
 }
