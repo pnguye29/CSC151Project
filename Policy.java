@@ -34,96 +34,113 @@ public class Policy
       this.phWeight = phWeight;
    }
   
-  //getter for Policy Number
+  /**getter for Policy Number
+   @return The policy number*/
    public int getPNum()
    {
       return pNum;
    }
-  //setter for Policy Number
+  /**setter for Policy Number
+   @param The new policy number*/
    public void setPNum(int pNum)
    {
       this.pNum = pNum;
    }
   
-  //getter for Provider Name
+  /**getter for Provider Name
+   @return The Provider Name*/
    public String getProviderName()
    {
       return providerName;
    }
-  //setter for Provider Name
+  /**setter for Provider Name
+   @param The new Provider Name*/
    public void setProviderName(String providerName)
    {
       this.providerName = providerName;
    }
   
-  //getter for Policyholder’s First Name
+  /**getter for Policyholder’s First Name
+   @return The Policyholder’s First Name*/
    public String getPHFirstName()
    {
       return phFirstName;
    }
-  //setter for Policyholder’s First Name
+  /**setter for Policyholder’s First Name
+   @param The new Policyholder’s First Name*/
    public void setPHFirstName(String phFirstName)
    {
       this.phFirstName = phFirstName;
    }
    
-   //getter for Policyholder’s Last Name
+   /**getter for Policyholder’s Last Name
+   @return The Policyholder’s Last Name*/
    public String getPHLastName()
    {
       return phLastName;
    }
    
-   //setter for Policyholder’s Last Name
+   /**setter for Policyholder’s Last Name
+   @param The new Policyholder’s Last Name*/
    public void setPHLastName(String phLastName)
    {
       this.phLastName = phLastName;
    }
    
-   //getter for Policyholder’s Age
+   /**getter for Policyholder’s Age
+   @return The Policyholder’s Age*/
    public int getPHAge()
    {
       return phAge;
    }
    
-   //setter for Policyholder’s Age
+   /**setter for Policyholder’s Age
+   @param The new Policyholder’s Age*/
    public void setPHAge(int phAge)
    {
       this.phAge = phAge;
    }
-   //getter for Policyholder’s Smoking Status (will be “smoker” or “non-smoker”)
+   /**getter for Smoking Status (will be “smoker” or “non-smoker”)
+   @return The Smoking Status (will be “smoker” or “non-smoker”)*/
    public String getPHSmokingStatus()
    {
       return phSmokingStatus;
    }
-  //setter for Policyholder’s Smoking Status (will be “smoker” or “non-smoker”)
+  /**setter for Smoking Status (will be “smoker” or “non-smoker”)
+   @param The new Smoking Status (will be “smoker” or “non-smoker”)*/
    public void setPHSmokingStatus(String phSmokingStatus)
    {
       this.phSmokingStatus = phSmokingStatus;
    }
   
-  //getter for Policyholder’s Height (in inches)
+  /**getter for Policyholder’s Height (in inches)
+   @return The Policyholder’s Height (in inches)*/
    public double getPHHeight()
    {
       return phHeight;
    }
-  //setter for Policyholder’s Height (in inches)
+  /**setter for Policyholder’s Height (in inches)
+   @param The new Policyholder’s Height (in inches)*/
    public void setPHHeight(double phHeight)
    {
       this.phHeight = phHeight;
    }
    
-   //getter for Policyholder’s Weight (in pounds)
+   /**getter for Policyholder’s Weight (in pounds)
+   @return The Policyholder’s Weight (in pounds)*/
    public double getPHWeight()
    {
       return phWeight;
    }
-  //setter for Policyholder’s Weight (in pounds)
+  /**setter for Policyholder’s Weight (in pounds)
+   @param The new Policyholder’s Weight (in pounds)*/
    public void setPHWeight(double phWeight)
    {
       this.phWeight = phWeight;
    }
    
-   //getter for returns the BMI of the policyholder)
+   /**getter for returns the BMI of the policyholder
+   @return The Policyholder’s BMI*/
    public double getBMI()
    {
       return (phWeight * 703 ) / (Math.pow(phHeight, 2));
