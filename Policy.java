@@ -157,7 +157,7 @@ public class Policy
       
       if(phSmokingStatus.equals("smoker")) 
       {
-         baseFee += 75;
+         baseFee += 100;
       }
       
       if(getBMI() > 35) 
