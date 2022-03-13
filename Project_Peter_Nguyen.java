@@ -29,7 +29,7 @@ public class Project_Peter_Nguyen
       int smoker = 0;
       int nonSmoker = 0;
       
-      File inputFile = new File("PolicyData.txt");   
+      File inputFile = new File("PolicyInformation.txt");   
       Scanner scanFile = new Scanner(inputFile);
       
       while (scanFile.hasNext())
