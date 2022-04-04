@@ -8,6 +8,9 @@ public class Policy
    private String phSmokingStatus; //Policyholder’s Smoking Status (will be “smoker” or “non-smoker”)
    private double phHeight; //Policyholder’s Height (in inches)
    private double phWeight; //Policyholder’s Weight (in pounds)
+   private static int instanceCount = 0;
+   private static int smoker = 0;
+   private static int nonsmoker = 0;
   
   //no-args constructor
    public Policy()
@@ -20,6 +23,7 @@ public class Policy
       phSmokingStatus = "non-smoker";   
       phHeight = 0.0;
       phWeight = 0.0;
+      instanceCount++;
    }
   // args constructor
    public Policy(int pNum, String providerName, String phFirstName, String phLastName, int phAge, String phSmokingStatus,double phHeight, double phWeight)
@@ -32,6 +36,14 @@ public class Policy
       this.phSmokingStatus = phSmokingStatus;   
       this.phHeight = phHeight;
       this.phWeight = phWeight;
+      instanceCount++;
+      
+      if(this.phSmokingStatus.equals("smoker")){
+         smoker++;
+      }
+      if(this.phSmokingStatus.equals("non-smoker")){
+         nonsmoker++;
+      }
    }
   
   /**getter for Policy Number
@@ -144,6 +156,23 @@ public class Policy
    public double getBMI()
    {
       return (phWeight * 703 ) / (Math.pow(phHeight, 2));
+   }
+   /**getter for instance count for the amount of class
+   @return The Instance Count*/
+   public int getInstanceCount()
+   {
+      return instanceCount;
+   }
+   
+   /**toString method
+   @return The string*/
+   public String toString()
+   {
+    String str = 
+      "There were " + instanceCount + " Policy objects created." +
+      "\n\nThe number of policies with a smoker is: " + smoker +
+      "\nThe number of policies with a non-smoker is: " + nonsmoker;
+      return str;
    }
    
    public double getInsurancePrice()
